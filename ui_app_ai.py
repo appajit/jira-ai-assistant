@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 from dotenv import load_dotenv
 from pathlib import Path
@@ -8,8 +9,14 @@ from agent.graph import build_graph
 
 ROOT = Path(__file__).parent
 
-# Load .env explicitly (avoids Python 3.13 dotenv auto-discovery issues)
+# Load .env explicitly for local dev (avoids Python 3.13 dotenv auto-discovery issues)
 load_dotenv(dotenv_path=ROOT / ".env", override=True)
+
+# On Streamlit Cloud, load secrets into environment variables
+if hasattr(st, "secrets"):
+    for key, value in st.secrets.items():
+        if isinstance(value, str):
+            os.environ.setdefault(key, value)
 
 st.set_page_config(page_title="JIRA Assistant AI", page_icon="🤖", layout="centered")
 st.title("🤖 JIRA Assistant AI")
