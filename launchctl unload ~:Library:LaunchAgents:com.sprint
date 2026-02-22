@@ -1,0 +1,3 @@
+launchctl unload ~/Library/LaunchAgents/com.sprintgoals.streamlit.plist 2>/dev/null
+launchctl load ~/Library/LaunchAgents/com.sprintgoals.streamlit.plist
+launchctl start com.sprintgoals.streamlit

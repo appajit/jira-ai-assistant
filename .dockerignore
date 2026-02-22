@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+sprint_goals_agent.egg-info/
+.env
+logs/
+reports/
+.git/
+.github/
+*.sh~
