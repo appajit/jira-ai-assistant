@@ -11,8 +11,8 @@ ROOT = Path(__file__).parent
 # Load .env explicitly (avoids Python 3.13 dotenv auto-discovery issues)
 load_dotenv(dotenv_path=ROOT / ".env", override=True)
 
-st.set_page_config(page_title="Sprint Assistant AI", page_icon="🤖", layout="centered")
-st.title("🤖 Sprint Assistant AI")
+st.set_page_config(page_title="JIRA Assistant AI", page_icon="🤖", layout="centered")
+st.title("🤖 JIRA Assistant AI")
 st.caption('Try: "Fetch sprint details for Aqua", "Fetch sprint details for all teams", "Push to Miro"')
 
 settings = Settings.load(ROOT)

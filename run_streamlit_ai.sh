@@ -1,7 +1,7 @@
 #!/bin/zsh
 set -e
 
-APP_DIR="$HOME/Projects/sprint-goals-agent"
+APP_DIR="$HOME/GitHub/JIRA-AI-Assistant"
 VENV="$APP_DIR/.venv"
 
 cd "$APP_DIR"
